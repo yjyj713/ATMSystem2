@@ -10,24 +10,25 @@ public class UserInfo : MonoBehaviour
     [SerializeField] Text cashmoneyText;
     [SerializeField] Text passbookmoneyText;
 
-    public Button descriptionButton; //입금버튼
-    public Button withdrawalButton; //출금버튼
+    private UserData userData;
 
+    //유저데이터 클래스를 만들면서 변수 정의 중복으로 필요없음.
     public string playername = "이유진";
     public int cashmoney = 100000;
     public int passbookmoney = 50000;
 
     void Start()
     {
+        userData = new UserData(playername, cashmoney, passbookmoney);
         UpdateUI(); //UI 초기 갱신
 
     }
 
     public void UpdateUI()
     {
-        nameText.text = playername;
-        cashmoneyText.text = string.Format("{0:#,###}", cashmoney);
-        passbookmoneyText.text = string.Format("{0:#,###}", passbookmoney);
+        nameText.text = userData.playername;
+        cashmoneyText.text = string.Format("{0:#,###}", userData.cashmoney);
+        passbookmoneyText.text = string.Format("{0:#,###}", userData.passbookmoney);
     }
 
     // Update is called once per frame
