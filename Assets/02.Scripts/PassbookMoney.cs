@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PassbookMoney : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Text passbook;
+
+    public void Passbook(int money)
     {
-        
+        if (money <= 0)
+        {
+            passbook.text = "0";
+            return;
+        }
+        passbook.text = string.Format("{0:#,###}", money);
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        Debug.Log("안녕"); //한글확인
+        Passbook(50000);
     }
 }
