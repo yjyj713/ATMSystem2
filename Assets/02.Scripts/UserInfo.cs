@@ -5,11 +5,25 @@ using UnityEngine.UI;
 
 public class UserInfo : MonoBehaviour
 {
+    public static UserInfo Instance { get; private set; }
 
     [SerializeField] Text nameText;
     [SerializeField] Text cashmoneyText;
     [SerializeField] Text passbookmoneyText;
 
+    void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Debug.LogWarning("다수의 유저인포 존재");
+            Destroy(gameObject);
+            return;
+        }
+    }
     void Start()
     {
         UpdateUI(); //UI 초기 갱신

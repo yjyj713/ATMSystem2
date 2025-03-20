@@ -24,5 +24,5 @@ public class GameManager : MonoBehaviour
 
         userData = new UserData(userData.playername, userData.cashmoney, userData.passbookmoney);
     }
-       
+
 }
