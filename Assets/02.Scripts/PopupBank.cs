@@ -103,6 +103,7 @@ public class PopupBank : MonoBehaviour
         {
             GameManager.Instance.userData.cashmoney -= amount;
             GameManager.Instance.userData.passbookmoney += amount;
+            GameManager.Instance.SaveUserData();
             UserInfo.Instance.UpdateUI();
         }
         else
@@ -116,6 +117,7 @@ public class PopupBank : MonoBehaviour
         {
             GameManager.Instance.userData.passbookmoney -= amount;
             GameManager.Instance.userData.cashmoney += amount;
+            GameManager.Instance.SaveUserData();
             UserInfo.Instance.UpdateUI();
         }
         else

@@ -738,7 +738,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &321925847
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2515,6 +2515,8 @@ MonoBehaviour:
     playername: "\uC774\uC720\uC9C4"
     cashmoney: 1000000
     passbookmoney: 60000
+    ID: 
+    PW: 
 --- !u!4 &1166053027
 Transform:
   m_ObjectHideFlags: 0
@@ -2625,7 +2627,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1233544324
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3908,7 +3910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1823775594
 RectTransform:
   m_ObjectHideFlags: 0
