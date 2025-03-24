@@ -36,6 +36,11 @@ public class UserInfo : MonoBehaviour
             nameText.text = GameManager.Instance.userData.playername;
             cashmoneyText.text = string.Format("{0:#,###}", GameManager.Instance.userData.cashmoney);
             passbookmoneyText.text = string.Format("{0:#,###}", GameManager.Instance.userData.passbookmoney);
+            if (GameManager.Instance.userData.cashmoney <= 0)
+                cashmoneyText.text = "0";
+
+            if (GameManager.Instance.userData.passbookmoney <= 0)
+                passbookmoneyText.text = "0";
         }
     }
 }
