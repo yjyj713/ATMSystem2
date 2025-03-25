@@ -92,11 +92,11 @@ public class PopupBank : MonoBehaviour
         ATM.gameObject.SetActive(true);
     }
     private void WithdrawalBackBtnClick()
+
     {
         Withdrawal.gameObject.SetActive(false);
         ATM.gameObject.SetActive(true);
     }
-
     public void Depositt(int amount) //입금기능
     {
         if(GameManager.Instance.userData.cashmoney >= amount)
